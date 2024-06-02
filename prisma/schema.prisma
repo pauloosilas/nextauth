@@ -10,12 +10,12 @@ datasource db {
 model User {
   id            String    @id @default(cuid())
   name          String?
-  createdAt     DateTime  @default(now())
   email         String?   @unique
   emailVerified DateTime?
   image         String?
   password      String?
-  updatedAt     DateTime
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime?  
   Account       Account[]
 }
 
